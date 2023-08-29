@@ -32,7 +32,8 @@ def executar_modulo_por_id(modulo, id_modulo):
         if nome_classe.startswith('Crawler'):
             classe = getattr(modulo, nome_classe)
             if hasattr(classe, "ID") and classe.ID == int(id_modulo):
-                return classe()
+                crawler = classe()
+                return crawler.run()
 
 
 if __name__ == "__main__":

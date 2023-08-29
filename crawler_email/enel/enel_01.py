@@ -9,6 +9,8 @@ class CrawlerEnelEmail(BaseCrawler):
 
     def __init__(self):
         logging.info('Inicializando Crawler Email (Enel).')
+
+    def run(self):
         self.conexao = self.make_service_email()  # noqa
         self.baixar_fatura()
 

@@ -15,11 +15,13 @@ class CrawlerLight(BaseCrawler):
 
     def __init__(self):
         logging.info('Inicializando Crawler Light.')
+
+    def run(self):
         self.driver = self.make_chrome_driver()
         self.login()
         self.download_faturas_atual()
         self.download_faturas()
-        sleep(15)
+        sleep(10)
         self.driver.quit()
 
     def login(self):

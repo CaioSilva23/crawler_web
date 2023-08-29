@@ -11,6 +11,8 @@ class CrawlerLightEmail(base.BaseCrawler):
 
     def __init__(self):
         logging.info('Inicializando Crawler Email (Light).')
+
+    def run(self):
         self.conexao = self.make_service_email()  # noqa
         self.baixar_fatura()
 
